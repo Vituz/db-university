@@ -13,7 +13,7 @@ Copiate il codice che vi dá, create nella repo un file index.html e nel body in
 
 ## departments
 
-- id
+- id                     UNIQUE AUTOINCREMENT PRIMARY_KEY
 - name                     
 - building
 - desc
@@ -21,8 +21,8 @@ Copiate il codice che vi dá, create nella repo un file index.html e nel body in
 
 ## courses
 
-- id
-- department_id
+- id                     UNIQUE AUTOINCREMENT PRIMARY_KEY
+- department_id          FOREING_KEY
 - name
 - years_of_course
 - desc
@@ -30,7 +30,7 @@ Copiate il codice che vi dá, create nella repo un file index.html e nel body in
 
 ## school_subjects
 
-- id
+- id                     UNIQUE AUTOINCREMENT PRIMARY_KEY
 - name
 - code
 - cfu
@@ -39,16 +39,16 @@ Copiate il codice che vi dá, create nella repo un file index.html e nel body in
 
 ## teachers
 
-- id
-- school_subject_id
+- id                     UNIQUE AUTOINCREMENT PRIMARY_KEY
+- school_subject_id      FOREING_KEY
 - name
 - lastname
 - note
 
 ## appeals
 
-- id
-- school_subject_id
+- id                     UNIQUE AUTOINCREMENT PRIMARY_KEY
+- school_subject_id      FOREING_KEY
 - name
 - building
 - date
@@ -57,16 +57,16 @@ Copiate il codice che vi dá, create nella repo un file index.html e nel body in
 
 ## votes
 
-- id
-- student_id
-- appeal_id
+- id                    UNIQUE AUTOINCREMENT PRIMARY_KEY
+- student_id            FOREING_KEY1
+- appeal_id             FOREING_KEY2
 - vote
 - date
 
 ## student
 
-- id
-- courses_id
+- id                   UNIQUE AUTOINCREMENT PRIMARY_KEY
+- courses_id           FOREING_KEY
 - name
 - lastname
 - age
