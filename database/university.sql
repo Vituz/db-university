@@ -23,8 +23,9 @@ AND `year` = 1;
 -- 5
 SELECT * 
 FROM `exams` 
-WHERE `date` = '2020-06-20' 
-AND TIME(`hour`) > '14';
+WHERE HOUR(`hour`) >= '14'
+AND `date` = '2020-06-20'; 
+ 
 
 -- 6
 SELECT * 
